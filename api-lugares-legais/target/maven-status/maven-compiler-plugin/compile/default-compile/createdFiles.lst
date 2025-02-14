@@ -1,0 +1,7 @@
+com\lugares\legais\model\Post.class
+ControllerUser.class
+com\lugares\legais\model\PlaceIndication.class
+com\lugares\legais\ApiLugaresLegaisApplication.class
+com\lugares\legais\enums\CriteriasAvaliation.class
+com\lugares\legais\model\User.class
+com\lugares\legais\enums\TypeOfPlace.class

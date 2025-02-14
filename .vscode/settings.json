@@ -1,3 +1,6 @@
 {
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.saveActions.organizeImports": true,
+    "java.import.maven.offline.enabled": true,
+    "java.import.generatesMetadataFilesAtProjectRoot": true
 }
