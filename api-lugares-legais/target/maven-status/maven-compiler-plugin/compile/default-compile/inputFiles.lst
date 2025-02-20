@@ -9,6 +9,6 @@ C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\model\PlaceIndication.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\dto\PostDTO.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\model\User.java
-C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\service\post\ValidateUserFlow.java
+C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\service\validation\GetUser.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\controller\ControllerPost.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\service\post\PostService.java

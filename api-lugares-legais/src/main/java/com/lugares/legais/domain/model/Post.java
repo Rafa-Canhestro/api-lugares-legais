@@ -21,6 +21,9 @@ public class Post {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
     
+    @ManyToOne
+    @JoinColumn(name = "place_id", nullable = false)
+    private PlaceIndication placeIndication;
     private int likes;
     private String title;
     private String text;

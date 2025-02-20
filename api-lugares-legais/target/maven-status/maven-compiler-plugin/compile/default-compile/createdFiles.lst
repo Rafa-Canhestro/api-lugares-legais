@@ -2,9 +2,9 @@ com\lugares\legais\domain\model\PlaceIndication.class
 com\lugares\legais\domain\model\User.class
 com\lugares\legais\domain\model\Post.class
 com\lugares\legais\domain\mapper\PostMapperImpl.class
-com\lugares\legais\domain\service\post\ValidateUserFlow.class
 com\lugares\legais\repository\UserRepository.class
 com\lugares\legais\domain\enums\TypeOfPlace.class
+com\lugares\legais\domain\service\validation\GetUser.class
 com\lugares\legais\domain\dto\PostDTO.class
 com\lugares\legais\ApiLugaresLegaisApplication.class
 com\lugares\legais\domain\exceptions\UserNotExistsException.class

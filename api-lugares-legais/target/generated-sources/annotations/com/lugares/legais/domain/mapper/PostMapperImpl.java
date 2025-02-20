@@ -2,12 +2,13 @@ package com.lugares.legais.domain.mapper;
 
 import com.lugares.legais.domain.dto.PostDTO;
 import com.lugares.legais.domain.model.Post;
+import com.lugares.legais.domain.model.User;
 import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-02-20T16:02:46-0300",
-    comments = "version: 1.5.5.Final, compiler: javac, environment: Java 23.0.2 (Oracle Corporation)"
+    date = "2025-02-20T18:36:03-0300",
+    comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.41.0.z20250115-2156, environment: Java 21.0.5 (Eclipse Adoptium)"
 )
 public class PostMapperImpl implements PostMapper {
 
@@ -19,31 +20,34 @@ public class PostMapperImpl implements PostMapper {
 
         PostDTO postDTO = new PostDTO();
 
-        postDTO.setTitle( post.getTitle() );
-        postDTO.setText( post.getText() );
         postDTO.setAmbience( post.getAmbience() );
-        postDTO.setServiceQuality( post.getServiceQuality() );
         postDTO.setDrinksAndFoods( post.getDrinksAndFoods() );
         postDTO.setMusicAndEntertanement( post.getMusicAndEntertanement() );
+        postDTO.setServiceQuality( post.getServiceQuality() );
+        postDTO.setText( post.getText() );
+        postDTO.setTitle( post.getTitle() );
 
         return postDTO;
     }
 
     @Override
-    public Post PostDtoToPost(PostDTO post) {
-        if ( post == null ) {
+    public Post PostDtoToPost(PostDTO postDto, User user) {
+        if ( postDto == null && user == null ) {
             return null;
         }
 
-        Post post1 = new Post();
+        Post post = new Post();
 
-        post1.setTitle( post.getTitle() );
-        post1.setText( post.getText() );
-        post1.setAmbience( post.getAmbience() );
-        post1.setServiceQuality( post.getServiceQuality() );
-        post1.setDrinksAndFoods( post.getDrinksAndFoods() );
-        post1.setMusicAndEntertanement( post.getMusicAndEntertanement() );
+        if ( postDto != null ) {
+            post.setAmbience( postDto.getAmbience() );
+            post.setDrinksAndFoods( postDto.getDrinksAndFoods() );
+            post.setMusicAndEntertanement( postDto.getMusicAndEntertanement() );
+            post.setServiceQuality( postDto.getServiceQuality() );
+            post.setText( postDto.getText() );
+            post.setTitle( postDto.getTitle() );
+        }
+        post.setUser( user );
 
-        return post1;
+        return post;
     }
 }

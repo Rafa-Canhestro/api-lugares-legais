@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PostDTO {
 
-    private String place;
+    private String namePlace;
     private String login;
     private String title;
     private String text;
