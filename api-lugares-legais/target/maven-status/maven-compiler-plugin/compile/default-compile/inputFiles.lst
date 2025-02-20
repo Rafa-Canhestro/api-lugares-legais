@@ -1,7 +1,14 @@
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\ApiLugaresLegaisApplication.java
+C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\exceptions\UserNotExistsException.java
+C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\enums\CriteriasAvaliation.java
+C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\mapper\PostMapper.java
+C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\repository\UserRepository.java
+C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\enums\TypeOfPlace.java
+C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\repository\PostRepository.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\model\Post.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\model\PlaceIndication.java
-C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\enums\CriteriasAvaliation.java
+C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\dto\PostDTO.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\model\User.java
-C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\enums\TypeOfPlace.java
-C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\controller\ControllerUser.java
+C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\service\post\ValidateUserFlow.java
+C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\controller\ControllerPost.java
+C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\service\post\PostService.java

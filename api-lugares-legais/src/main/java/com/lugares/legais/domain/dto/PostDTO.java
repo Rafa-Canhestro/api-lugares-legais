@@ -1,8 +1,6 @@
 package com.lugares.legais.domain.dto;
 
 import com.lugares.legais.domain.enums.CriteriasAvaliation;
-import com.lugares.legais.domain.model.User;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

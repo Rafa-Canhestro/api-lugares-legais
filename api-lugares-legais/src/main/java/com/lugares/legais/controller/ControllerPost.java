@@ -4,8 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.lugares.legais.domain.dto.PostDTO;
 import com.lugares.legais.domain.model.Post;
-import com.lugares.legais.domain.service.postserviceflow.PostService;
-
+import com.lugares.legais.domain.service.post.PostService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,7 +32,7 @@ public class ControllerPost {
     @GetMapping
     public ResponseEntity<Post> getPost() {
         Post post = new Post();
-        return ResponseEntity.status(HttpStatus.CREATED).body(post);
+        return post != null ? ResponseEntity.ok(post) : ResponseEntity.notFound().build();
     }
 
     @GetMapping("/allPosts")

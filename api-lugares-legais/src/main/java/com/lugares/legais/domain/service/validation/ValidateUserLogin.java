@@ -1,4 +1,4 @@
-package com.lugares.legais.domain.service.post;
+package com.lugares.legais.domain.service.validation;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -9,13 +9,14 @@ import com.lugares.legais.domain.exceptions.UserNotExistsException;
 
 @Component
 @RequiredArgsConstructor
-public class ValidateUserFlow {
+public class ValidateUserLogin {
 
     private final UserRepository userRepository;
 
     public void validate(String loginUser) {
-        Optional<User> userOptional = userRepository.findByLogin(loginUser);
-        userOptional.orElseThrow(() -> new UserNotExistsException());
+        if (!userRepository.existsByLogin(loginUser)) {
+            throw new UserNotExistsException();
+        }
     }
 
 }
