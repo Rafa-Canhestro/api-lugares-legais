@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class PostDTO {
 
     private String place;
-    private User user;
+    private String login;
     private String title;
     private String text;
     private CriteriasAvaliation ambience;

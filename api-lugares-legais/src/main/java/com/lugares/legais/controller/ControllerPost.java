@@ -1,9 +1,13 @@
 package com.lugares.legais.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.lugares.legais.domain.service.PostService;
+
 import com.lugares.legais.domain.dto.PostDTO;
 import com.lugares.legais.domain.model.Post;
+import com.lugares.legais.domain.service.postserviceflow.PostService;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,13 +25,15 @@ public class ControllerPost {
     private final PostService postService;
 
     @PostMapping
-    public Post createPost(@RequestBody PostDTO post) {
-        return new Post();
+    public ResponseEntity<Post> createPost(@RequestBody PostDTO post) {
+        Post createdPost = postService.createPost(post);
+        return ResponseEntity.status(HttpStatus.CREATED).body(createdPost);
     }
 
     @GetMapping
-    public Post getPost() {
-        return new Post();
+    public ResponseEntity<Post> getPost() {
+        Post post = new Post();
+        return ResponseEntity.status(HttpStatus.CREATED).body(post);
     }
 
     @GetMapping("/allPosts")
