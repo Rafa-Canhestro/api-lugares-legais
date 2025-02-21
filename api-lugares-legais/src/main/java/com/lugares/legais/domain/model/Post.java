@@ -2,11 +2,13 @@ package com.lugares.legais.domain.model;
 
 import com.lugares.legais.domain.enums.CriteriasAvaliation;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import jakarta.persistence.*;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity

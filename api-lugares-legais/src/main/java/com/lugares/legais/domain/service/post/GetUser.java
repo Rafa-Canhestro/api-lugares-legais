@@ -1,4 +1,4 @@
-package com.lugares.legais.domain.service.validation;
+package com.lugares.legais.domain.service.post;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ public class GetUser {
 
     private final UserRepository userRepository;
 
-    public User get(String loginUser) {
+    public User execute(String loginUser) {
         Optional<User> userOptional = userRepository.findByLogin(loginUser);
         User user = userOptional.orElseThrow(() -> new UserNotExistsException());
         return user;

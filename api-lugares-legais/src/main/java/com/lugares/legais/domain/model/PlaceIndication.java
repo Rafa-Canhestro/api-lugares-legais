@@ -3,11 +3,13 @@ package com.lugares.legais.domain.model;
 import com.lugares.legais.domain.enums.TypeOfPlace;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import java.util.*;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity

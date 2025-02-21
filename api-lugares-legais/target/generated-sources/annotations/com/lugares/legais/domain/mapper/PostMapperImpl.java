@@ -1,13 +1,14 @@
 package com.lugares.legais.domain.mapper;
 
 import com.lugares.legais.domain.dto.PostDTO;
+import com.lugares.legais.domain.model.PlaceIndication;
 import com.lugares.legais.domain.model.Post;
 import com.lugares.legais.domain.model.User;
 import javax.annotation.processing.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-02-20T18:36:03-0300",
+    date = "2025-02-21T01:27:55-0300",
     comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.41.0.z20250115-2156, environment: Java 21.0.5 (Eclipse Adoptium)"
 )
 public class PostMapperImpl implements PostMapper {
@@ -31,23 +32,24 @@ public class PostMapperImpl implements PostMapper {
     }
 
     @Override
-    public Post PostDtoToPost(PostDTO postDto, User user) {
-        if ( postDto == null && user == null ) {
+    public Post postDtoToPost(PostDTO postDto, User user, PlaceIndication place) {
+        if ( postDto == null && user == null && place == null ) {
             return null;
         }
 
-        Post post = new Post();
+        Post.PostBuilder post = Post.builder();
 
         if ( postDto != null ) {
-            post.setAmbience( postDto.getAmbience() );
-            post.setDrinksAndFoods( postDto.getDrinksAndFoods() );
-            post.setMusicAndEntertanement( postDto.getMusicAndEntertanement() );
-            post.setServiceQuality( postDto.getServiceQuality() );
-            post.setText( postDto.getText() );
-            post.setTitle( postDto.getTitle() );
+            post.ambience( postDto.getAmbience() );
+            post.drinksAndFoods( postDto.getDrinksAndFoods() );
+            post.musicAndEntertanement( postDto.getMusicAndEntertanement() );
+            post.serviceQuality( postDto.getServiceQuality() );
+            post.text( postDto.getText() );
+            post.title( postDto.getTitle() );
         }
-        post.setUser( user );
+        post.user( user );
+        post.placeIndication( place );
 
-        return post;
+        return post.build();
     }
 }
