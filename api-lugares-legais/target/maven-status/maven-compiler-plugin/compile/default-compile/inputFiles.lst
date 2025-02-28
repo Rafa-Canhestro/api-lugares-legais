@@ -1,5 +1,6 @@
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\ApiLugaresLegaisApplication.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\exceptions\UserNotExistsException.java
+C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\config\AppConfig.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\client\LocationIQClient.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\enums\CriteriasAvaliation.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\service\post\GetUser.java
@@ -13,6 +14,7 @@ C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\service\location\LocationService.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\repository\PlaceIndicationRepository.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\exceptions\PlaceIndicationNotExistsException.java
+C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\client\exceptions\LocationIQException.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\dto\PostDTO.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\domain\model\User.java
 C:\Users\Rafael\Documents\Códigos GIT\api-lugares-legais\api-lugares-legais\src\main\java\com\lugares\legais\controller\ControllerPost.java

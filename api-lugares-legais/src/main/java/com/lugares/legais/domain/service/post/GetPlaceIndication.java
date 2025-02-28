@@ -12,8 +12,8 @@ public class GetPlaceIndication {
 
     private final PlaceIndicationRepository repository;
 
-    public Optional<PlaceIndication> execute(String namePlace) {
-        return repository.findByNamePlace(namePlace);
+    public Optional<PlaceIndication> execute(String placeName) {
+        return repository.findByPlaceName(placeName);
     }
 
 }

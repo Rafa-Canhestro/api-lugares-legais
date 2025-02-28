@@ -8,7 +8,7 @@ import java.util.*;
 @Repository
 public interface PlaceIndicationRepository extends JpaRepository<PlaceIndication, Long> {
 
-    Optional<PlaceIndication> findByNamePlace(String namePlace);
-    boolean existsByNamePlace(String login);
+    Optional<PlaceIndication> findByPlaceName(String placeName);
+    boolean existsByPlaceName(String placeName);
 
 }

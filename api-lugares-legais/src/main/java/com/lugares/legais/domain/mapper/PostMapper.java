@@ -3,13 +3,12 @@ package com.lugares.legais.domain.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 import org.mapstruct.Mapping;
-
 import com.lugares.legais.domain.model.PlaceIndication;
 import com.lugares.legais.domain.model.Post;
 import com.lugares.legais.domain.dto.PostDTO;
 import com.lugares.legais.domain.model.User;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface PostMapper {
 
     PostMapper INSTANCE = Mappers.getMapper(PostMapper.class);

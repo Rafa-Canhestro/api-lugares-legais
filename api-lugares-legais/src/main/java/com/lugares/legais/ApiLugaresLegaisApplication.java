@@ -9,5 +9,6 @@ public class ApiLugaresLegaisApplication {
     public static void main(String[] args) {
         SpringApplication.run(ApiLugaresLegaisApplication.class, args);
     }
+    
 }
 

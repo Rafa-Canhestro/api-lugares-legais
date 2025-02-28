@@ -12,8 +12,10 @@ com\lugares\legais\domain\service\post\PostService.class
 com\lugares\legais\domain\enums\CriteriasAvaliation.class
 com\lugares\legais\controller\ControllerPost.class
 com\lugares\legais\repository\PostRepository.class
+com\lugares\legais\config\AppConfig.class
 com\lugares\legais\domain\model\PlaceIndication.class
 com\lugares\legais\domain\model\User.class
+com\lugares\legais\client\exceptions\LocationIQException.class
 com\lugares\legais\domain\model\Post.class
 com\lugares\legais\domain\service\location\LocationService.class
 com\lugares\legais\domain\service\post\GetPlaceIndication.class
