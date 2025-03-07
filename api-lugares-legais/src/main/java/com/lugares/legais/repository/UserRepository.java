@@ -2,8 +2,10 @@ package com.lugares.legais.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.lugares.legais.domain.Entity.User;
+
 import java.util.*;
-import com.lugares.legais.domain.model.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {

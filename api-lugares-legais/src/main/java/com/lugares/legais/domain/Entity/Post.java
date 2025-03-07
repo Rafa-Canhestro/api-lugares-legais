@@ -1,4 +1,4 @@
-package com.lugares.legais.domain.model;
+package com.lugares.legais.domain.Entity;
 
 import com.lugares.legais.domain.enums.CriteriasAvaliation;
 import lombok.AllArgsConstructor;

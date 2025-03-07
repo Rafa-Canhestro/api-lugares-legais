@@ -1,15 +1,15 @@
 package com.lugares.legais.domain.mapper;
 
+import com.lugares.legais.domain.Entity.PlaceIndication;
+import com.lugares.legais.domain.Entity.Post;
+import com.lugares.legais.domain.Entity.User;
 import com.lugares.legais.domain.dto.PostDTO;
-import com.lugares.legais.domain.model.PlaceIndication;
-import com.lugares.legais.domain.model.Post;
-import com.lugares.legais.domain.model.User;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-02-28T01:52:22-0300",
+    date = "2025-03-07T02:17:59-0300",
     comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.41.0.z20250213-2037, environment: Java 21.0.6 (Eclipse Adoptium)"
 )
 @Component

@@ -1,0 +1,15 @@
+# Ignore compiled files
+target/
+*.class
+*.log
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore environment variables
+.env
+application.properties

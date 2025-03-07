@@ -1,4 +1,4 @@
-package com.lugares.legais.domain.service.location;
+package com.lugares.legais.domain.services.location;
 
 import org.springframework.stereotype.Service;
 import com.lugares.legais.client.LocationIQClient;

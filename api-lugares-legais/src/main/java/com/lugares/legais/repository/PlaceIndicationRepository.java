@@ -1,8 +1,10 @@
 package com.lugares.legais.repository;
 
-import com.lugares.legais.domain.model.PlaceIndication;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.lugares.legais.domain.Entity.PlaceIndication;
+
 import java.util.*;
 
 @Repository

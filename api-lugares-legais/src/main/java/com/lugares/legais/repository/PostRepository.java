@@ -3,7 +3,8 @@ package com.lugares.legais.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.*;
 import org.springframework.stereotype.Repository;
-import com.lugares.legais.domain.model.Post;
+
+import com.lugares.legais.domain.Entity.Post;
 
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long>{

@@ -1,10 +1,9 @@
 package com.lugares.legais.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import com.lugares.legais.domain.Entity.Post;
 import com.lugares.legais.domain.dto.PostDTO;
-import com.lugares.legais.domain.model.Post;
-import com.lugares.legais.domain.service.post.PostService;
+import com.lugares.legais.domain.services.post.PostService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

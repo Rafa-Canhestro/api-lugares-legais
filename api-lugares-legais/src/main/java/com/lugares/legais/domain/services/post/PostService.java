@@ -1,14 +1,14 @@
-package com.lugares.legais.domain.service.post;
+package com.lugares.legais.domain.services.post;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import com.lugares.legais.repository.PostRepository;
-import com.lugares.legais.domain.model.Post;
+import com.lugares.legais.domain.Entity.PlaceIndication;
+import com.lugares.legais.domain.Entity.Post;
+import com.lugares.legais.domain.Entity.User;
 import com.lugares.legais.domain.dto.PostDTO;
 import com.lugares.legais.domain.mapper.PostMapperImpl;
-import com.lugares.legais.domain.model.User;
-import com.lugares.legais.domain.service.location.LocationService;
-import com.lugares.legais.domain.model.PlaceIndication;
+import com.lugares.legais.domain.services.location.LocationService;
 import java.util.*;
 
 @Service

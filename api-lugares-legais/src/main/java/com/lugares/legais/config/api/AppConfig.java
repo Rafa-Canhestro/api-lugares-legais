@@ -1,4 +1,4 @@
-package com.lugares.legais.config;
+package com.lugares.legais.config.api;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
