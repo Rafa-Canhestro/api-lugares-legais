@@ -13,7 +13,7 @@ public class GetUser {
 
     private final UserRepository userRepository;
 
-    public User execute(String loginUser) {
+    public User get(String loginUser) {
         Optional<User> userOptional = userRepository.findByLogin(loginUser);
         User user = userOptional.orElseThrow(() -> new UserNotExistsException());
         return user;

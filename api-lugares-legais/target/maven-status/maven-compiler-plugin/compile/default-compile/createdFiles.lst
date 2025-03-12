@@ -1,4 +1,5 @@
 com\lugares\legais\domain\exceptions\InvalidPassWordException.class
+com\lugares\legais\domain\mapper\UserMapperImpl.class
 com\lugares\legais\controller\AuthController.class
 com\lugares\legais\domain\exceptions\PlaceIndicationNotExistsException.class
 com\lugares\legais\repository\UserRepository.class

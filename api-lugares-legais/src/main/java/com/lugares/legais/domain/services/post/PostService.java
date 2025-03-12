@@ -1,6 +1,8 @@
 package com.lugares.legais.domain.services.post;
 
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import com.lugares.legais.repository.PostRepository;
 import com.lugares.legais.domain.Entity.PlaceIndication;
@@ -10,6 +12,7 @@ import com.lugares.legais.domain.dto.PostDTO;
 import com.lugares.legais.domain.mapper.PostMapperImpl;
 import com.lugares.legais.domain.services.location.LocationService;
 import java.util.*;
+import org.springframework.security.core.Authentication;
 
 @Service
 @RequiredArgsConstructor
@@ -22,13 +25,15 @@ public class PostService {
     private final PostMapperImpl mapper;
 
     public Post createPost(PostDTO postInformation) {
-        User user = getUser.execute(postInformation.getLogin());
-        Optional<PlaceIndication> optionalPlace = getPlaceIndication.execute(postInformation.getNamePlace());
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String username = authentication.getName();
+        User user = getUser.get(username);
+        Optional<PlaceIndication> optionalPlace = getPlaceIndication.get(postInformation.getNamePlace());
         Post post = mapPost(optionalPlace, postInformation, user);
         savePost(post);
         
         return post;
-    }
+    } 
 
     private Post mapPost(Optional<PlaceIndication> optionalPlace, PostDTO postInformation, User user) {
         if (optionalPlace.isEmpty()) {

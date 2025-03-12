@@ -13,7 +13,6 @@ public interface PostMapper {
 
     PostMapper INSTANCE = Mappers.getMapper(PostMapper.class);
 
-    @Mapping(target = "login", ignore = true)
     @Mapping(target = "namePlace", ignore = true)
     PostDTO postToPostDTO(Post post);
 

@@ -6,6 +6,10 @@ public class LocationIQException extends RuntimeException {
 
     private String statusCode;
 
+    public LocationIQException() {
+        super(ERROR_MESSAGE);
+    }
+
     public LocationIQException(String statusCode) {
         super(ERROR_MESSAGE);
         this.statusCode = statusCode;

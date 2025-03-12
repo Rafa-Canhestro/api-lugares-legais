@@ -13,7 +13,7 @@ public class GetPlaceIndication {
 
     private final PlaceIndicationRepository repository;
 
-    public Optional<PlaceIndication> execute(String placeName) {
+    public Optional<PlaceIndication> get(String placeName) {
         return repository.findByPlaceName(placeName);
     }
 

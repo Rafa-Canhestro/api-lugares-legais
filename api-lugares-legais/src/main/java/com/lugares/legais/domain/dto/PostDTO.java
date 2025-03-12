@@ -15,9 +15,6 @@ public class PostDTO {
     @NotNull(message = "name place cannot be null") 
     private String namePlace;
 
-    @NotNull(message = "login cannot be null") 
-    private String login;
-
     @NotNull(message = "title cannot be null") 
     private String title;
 

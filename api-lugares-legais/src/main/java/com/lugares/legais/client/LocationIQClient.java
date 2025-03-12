@@ -3,16 +3,17 @@ package com.lugares.legais.client;
 import com.lugares.legais.client.exceptions.LocationIQException;
 import com.lugares.legais.domain.dto.LocationIQResponseDTO;
 import lombok.RequiredArgsConstructor;
-import reactor.core.publisher.Mono;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
-import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.http.ResponseEntity;
 
 @Component
 @RequiredArgsConstructor
 public class LocationIQClient {
 
-    private final WebClient.Builder webClientBuilder;
+    private final RestTemplate restTemplate;
 
     @Value("${locationiq.api.key}")
     private String apiKey;
@@ -27,25 +28,27 @@ public class LocationIQClient {
     }
 
     private String getUrlApiLocation(String place) {
-        String url = BASE_URL + "?key=" + apiKey + "&q=" + place.replace(" ", "+") + "&format=json";
-        return url;
-    }    
-
-    private LocationIQResponseDTO[] callApiLocation(String url) {
-        return webClientBuilder.build()
-        .get()
-        .uri(url)
-        .exchangeToMono(response -> {
-            if (response.statusCode().is2xxSuccessful()) {
-                return response.bodyToMono(LocationIQResponseDTO[].class);
-            } else {
-                return Mono.<LocationIQResponseDTO[]>error(
-                    new LocationIQException("code error: " + response.statusCode())
-                );
-            }
-        })
-        .block();
+        return BASE_URL + "?key=" + apiKey + "&q=" + place.replace(" ", "+") + "&format=json";
     }
 
-}
+    private LocationIQResponseDTO[] callApiLocation(String url) {
+        try {
+            ResponseEntity<LocationIQResponseDTO[]> response = restTemplate.getForEntity(url, LocationIQResponseDTO[].class);
+            
+            if (response.getStatusCode().is2xxSuccessful()) {
+                return response.getBody();
+            } else {
+                throw new LocationIQException("Error: " + response.getStatusCode());
+            }
 
+        } catch (Exception e) {
+            throw new LocationIQException();
+        }
+    }
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+    
+}
