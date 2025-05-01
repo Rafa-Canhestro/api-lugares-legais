@@ -1,4 +1,4 @@
-package com.lugares.legais.domain.services.post;
+package com.lugares.legais.domain.helper;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -9,12 +9,12 @@ import java.util.*;
 
 @Component
 @RequiredArgsConstructor
-public class GetUser {
+public class GetUserHelper {
 
     private final UserRepository userRepository;
 
-    public User get(String loginUser) {
-        Optional<User> userOptional = userRepository.findByLogin(loginUser);
+    public User get(String userLogin) {
+        Optional<User> userOptional = userRepository.findByLogin(userLogin);
         User user = userOptional.orElseThrow(() -> new UserNotExistsException());
         return user;
     }
