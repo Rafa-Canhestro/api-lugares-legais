@@ -1,5 +1,9 @@
 package com.lugares.legais.domain.Entity;
 
+import java.time.LocalDateTime;
+
+import org.hibernate.annotations.CreationTimestamp;
+
 import com.lugares.legais.domain.enums.CriteriasAvaliation;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -34,5 +38,9 @@ public class Post {
     private CriteriasAvaliation serviceQuality;
     private CriteriasAvaliation drinksAndFoods;
     private CriteriasAvaliation musicAndEntertanement;
+
+    @CreationTimestamp
+    @Column(updatable = false)
+    private LocalDateTime createdAt;
 
 }
