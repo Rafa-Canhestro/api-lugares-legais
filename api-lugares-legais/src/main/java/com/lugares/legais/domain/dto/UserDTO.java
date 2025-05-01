@@ -1,5 +1,7 @@
 package com.lugares.legais.domain.dto;
 
+import com.lugares.legais.domain.enums.SexualDefinition;
+
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,6 +22,6 @@ public class UserDTO {
     private String age;
 
     @NotNull(message = "you must inform your sex/genre") 
-    private String sex;
+    private SexualDefinition sexualDefinition;
 
 }

@@ -1,6 +1,7 @@
 package com.lugares.legais.domain.Entity;
 
 import java.util.*;
+import com.lugares.legais.domain.enums.SexualDefinition;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,7 +27,7 @@ public class User {
     private String passWord;
 
     private String age;
-    private String sex;
+    private SexualDefinition sexualDefinition;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Post> posts;

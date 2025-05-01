@@ -7,18 +7,18 @@ import com.lugares.legais.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import com.lugares.legais.domain.mapper.UserMapperImpl;
+import com.lugares.legais.domain.util.ValidatePassWordUtil;
 
 @Service
 @RequiredArgsConstructor
 public class UserService {
 
     private final UserRepository userRepository;
-    private final ValidatePassWord validatePassWord;
     private final UserMapperImpl mapper;
 
     public User createUser(UserDTO userDTO) {
         validateIfLoginAlreadyExists(userDTO);
-        validatePassWord.validate(userDTO.getPassWord());
+        ValidatePassWordUtil.validatePassWord(userDTO.getPassWord());
         User user = mapper.userDtoToUser(userDTO);
         userRepository.save(user);
         return user;
