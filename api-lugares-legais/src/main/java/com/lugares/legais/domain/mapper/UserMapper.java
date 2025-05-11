@@ -4,7 +4,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 import org.mapstruct.Mapping;
 import com.lugares.legais.domain.Entity.User;
-import com.lugares.legais.domain.dto.UserDTO;
+import com.lugares.legais.domain.dto.UserCreateDTO;
 
 @Mapper(componentModel = "spring")
 public interface UserMapper {
@@ -13,6 +13,6 @@ public interface UserMapper {
 
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "posts", ignore = true)
-    User userDtoToUser(UserDTO userDTO);
+    User userCreateDtoToUser(UserCreateDTO userCreateDTO);
 
 }

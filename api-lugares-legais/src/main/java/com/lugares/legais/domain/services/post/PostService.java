@@ -9,10 +9,9 @@ import com.lugares.legais.domain.Entity.Post;
 import com.lugares.legais.domain.Entity.User;
 import com.lugares.legais.domain.dto.PostDTO;
 import com.lugares.legais.domain.helper.GetUserHelper;
-import com.lugares.legais.domain.mapper.PostMapperImpl;
+import com.lugares.legais.domain.mapper.PostMapper;
 import com.lugares.legais.domain.services.location.LocationService;
 import com.lugares.legais.domain.services.post.helper.GetPlaceIndicationHelper;
-
 import java.util.*;
 import org.springframework.security.core.Authentication;
 
@@ -24,7 +23,7 @@ public class PostService {
     private final GetUserHelper getUserHelper;
     private final GetPlaceIndicationHelper getPlaceIndicationHelper;
     private final LocationService locationService;
-    private final PostMapperImpl mapper;
+    private final PostMapper mapper;
 
     public Post createPost(PostDTO postInformation) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

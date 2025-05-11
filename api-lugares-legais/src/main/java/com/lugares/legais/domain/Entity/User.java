@@ -24,7 +24,7 @@ public class User {
     private String login;
 
     @Column(unique = true, nullable = false)
-    private String passWord;
+    private String password;
 
     private String age;
     private SexualDefinition sexualDefinition;
