@@ -4,7 +4,6 @@ import com.lugares.legais.client.exceptions.LocationIQException;
 import com.lugares.legais.domain.dto.LocationIQResponseDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.http.ResponseEntity;
@@ -44,11 +43,6 @@ public class LocationIQClient {
         } catch (Exception e) {
             throw new LocationIQException();
         }
-    }
-
-    @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
     }
     
 }

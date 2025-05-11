@@ -1,5 +1,8 @@
+# Maven
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
 # Ignore compiled files
-target/
 *.class
 *.log
 
@@ -10,6 +13,6 @@ target/
 .DS_Store
 Thumbs.db
 
-# Ignore environment variables
+# Ignore local environment variables
 .env
 application.properties
